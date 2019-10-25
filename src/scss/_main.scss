@@ -40,11 +40,10 @@
   }
   .owl-carousel {
     padding: $main-padding;
-
     max-width: 800px;
     margin: 0
       auto;
-    @media (max-width: 990px) {
+    @media (max-width: 1149px) {
       padding: 10px;
     }
     .owl-nav {

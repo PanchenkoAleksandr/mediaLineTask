@@ -1,3 +1,8 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #menu{
+    display: none;
+  }
+}
 .mm-panel {
   background-color: white;
 }
