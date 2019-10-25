@@ -1,0 +1,47 @@
+.mm-panel {
+  background-color: white;
+}
+.mm-navbar__title {
+  background-color: $back-ground-color;
+  height: 100px;
+  opacity: 100%;
+}
+.mm-listitem {
+  .to-hide {
+    padding-left: 45px;
+  }
+  .mobile {
+    img {
+      height: 100%;
+      margin-right: 20px;
+    }
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px;
+  }
+  .yelow {
+    img {
+      height: 100%;
+      margin-right: 20px;
+    }
+    text-align: center;
+    background-color: $back-ground-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
+.mm-panel {
+  &::after {
+    display: none;
+  }
+}
+.mm-navbar__btn {
+  background-color: $back-ground-color;
+}
+
+.mm-navbar__title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -1,0 +1,70 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    opacity: 1;
+    width: $close-width;
+    height: $close-height;
+    position: relative;
+    top: -$close-height/2 !important;
+    left: 500px-$close-width/2-7px !important;
+    cursor: pointer;
+    margin-bottom: -$close-height/1.5;
+  }
+  .modal-add {
+    font-weight: bold;
+    background-color: white;
+    border: 3px
+      solid
+      $back-ground-color;
+    max-width: 500px;
+    width: 75%;
+    form {
+      font-weight: bold;
+      padding: 0px
+        60px
+        60px
+        60px;
+      input {
+        padding-left: 15px;
+        width: 100%;
+        margin: 15px
+          0px;
+        height: 50px;
+      }
+      .rooms {
+        font-weight: bold;
+        .rooms_count {
+          width: 25px;
+          height: 25px;
+          @include button(
+
+          );
+          border: 1px
+            solid
+            #d2d2d2;
+        }
+      }
+    }
+    textarea {
+      padding: 15px;
+      font-weight: bold;
+      width: 100%;
+      margin: 15px
+        0px;
+      height: 130px;
+    }
+    .submit {
+      @include button(
+
+      );
+      font-weight: bold;
+      background-color: $back-ground-color;
+      box-shadow: 0
+        1px
+        5px
+        #d2d2d2;
+    }
+  }
+}

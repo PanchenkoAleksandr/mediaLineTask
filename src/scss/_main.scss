@@ -1,0 +1,100 @@
+.main {
+  @include container(
+
+  );
+  .navigation {
+    display: inline-flex;
+    padding: $main-padding;
+    @media (max-width: 1149px) {
+      padding: 10px;
+    }
+    @media (max-width: 560px) {
+      display: none;
+    }
+    .navigation_item {
+      span {
+        a {
+          @include href(
+
+          );
+        }
+      }
+    }
+  }
+  h1 {
+    padding: $main-padding;
+    @media (max-width: 1149px) {
+      padding: 10px;
+    }
+    font-size: 3.5rem;
+    @media (max-width: 1149px) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    padding: $main-padding;
+    @media (max-width: 1149px) {
+      padding: 10px !important;
+    }
+    line-height: 1.5rem;
+  }
+  .owl-carousel {
+    padding: $main-padding;
+
+    max-width: 800px;
+    margin: 0
+      auto;
+    @media (max-width: 990px) {
+      padding: 10px;
+    }
+    .owl-nav {
+      &
+        .owl-prev {
+        @include owl-nav(
+
+        );
+        left: 25px;
+      }
+      &
+        .owl-next {
+        @include owl-nav(
+
+        );
+        right: 25px;
+      }
+    }
+    .owl-dots {
+      @media (max-width: 990px) {
+        display: none;
+      }
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      .owl-dot {
+        &:focus {
+          outline: none;
+        }
+        &.active
+          span {
+          background: $back-ground-color;
+        }
+        display: inline-block;
+        padding: 0
+          10px !important;
+        span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          border: 1px
+            solid
+            #d2d2d2;
+          transition: background-color
+            0.25s;
+        }
+      }
+    }
+  }
+}

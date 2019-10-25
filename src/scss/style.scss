@@ -1,0 +1,115 @@
+$back-ground-color: #ffe05d;
+$font-family: arial;
+$img-1: "img/news-1.jpg";
+$main-padding: 25px
+  90px;
+$close-width: 160px;
+$close-height: 160px;
+
+@mixin container(
+
+) {
+  display: block;
+  margin: 0
+    auto;
+  width: 100%;
+  max-width: 1150px;
+}
+
+@mixin menu-item(
+
+) {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 125px;
+  cursor: pointer;
+}
+
+@mixin href(
+
+) {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@mixin owl-nav(
+
+) {
+}
+
+@mixin button(
+
+) {
+  cursor: pointer;
+  border: none;
+  opacity: 100%;
+  background: rgba(
+    1,
+    1,
+    1,
+    0
+  );
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin logo(
+
+) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin owl-nav(
+
+) {
+  outline: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  border-radius: 100%;
+  text-align: center;
+  transition: opacity
+    0.25s;
+  cursor: pointer;
+  i {
+    color: $back-ground-color;
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+@mixin news-item(
+  $path
+) {
+  background-image: $path;
+  background-color: rgba
+    (
+      1,
+      1,
+      1,
+      0.5
+    );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+@import "header";
+@import "mmenu";
+@import "main";
+@import "news";
+@import "footer";
+@import "modal";
