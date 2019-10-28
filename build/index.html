@@ -8,117 +8,162 @@
   <link rel="stylesheet" href="style/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/magnific-popup.css" />
-  <link rel="stylesheet" href="style/mmenu.css">
-  <link rel="stylesheet" href="style/mburger.css">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style/style.min.css" />
   <script src="js/jQuery3.4.1.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/mmenu.js"></script>
   <script src="js/script.min.js"></script>
   <title>
-    Test
+    mediaLineTask
   </title>
 </head>
 
 <body>
-  <div class="page">
 
-    <header>
+  <header>
+    <div class="container-header">
       <div class="header">
+
         <div class="logo">
           <img src="img/logo-light.png" alt="Лайт">
         </div>
-        <ul class="menu">
-          <li class="menu-item active">
-            <a href="#" class="menu-item-href">О комплексе</a></li>
-          <li class="menu-item">
-            <a href="#" class="menu-item-href">Выбор квартиры</a></li>
-          <li class="menu-item">
-            <a href="#" class="menu-item-href">О застройщике</a></li>
-          <li class="menu-item">
-            <a href="#" class="menu-item-href">Новости</a></li>
-          <li class="menu-item">
-            <a href="#" class="menu-item-href">Контакты</a></li>
-        </ul>
-        <div class="to-call">
-          <div class="to-call_number">
-            +375 (29) 608-00-55
-          </div>
-          <div class="to-call_button">
-            <div class="to-call_img">
-              <a href="tel:+375296080055"><img src="img/phone.png" alt="Позвонить"></a>
-            </div>
-            <div class="to-call_ref">
-              <a href="#3" class="modal-pop-up">заявка</a>
-            </div>
-          </div>
-        </div>
+
+        <nav id="menu">
+
+          <ul class="menu">
+            <li class="menu-item active">
+              <a href="#" class="menu-item-href">О комплексе</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-item-href">Выбор квартиры</a></li>
+            <li class="menu-item" id="sub-menu">
+
+              <a href="#" class="menu-item-href">О застройщике
+                <i class="fa fa-angle-up to-hide" aria-hidden="true"></i>
+              </a>
+              <div class="to-hide-item">
+                <a href="#">Пункт 1</a>
+                <a href="#">Пункт 2</a>
+                <a href="#">Пункт 3</a>
+              </div>
+
+            </li>
+            <li class="menu-item to-hide-in-mobile">
+              <a href="#" class="menu-item-href">Новости</a></li>
+            <li class="menu-item to-hide-in-mobile">
+              <a href="#" class="menu-item-href">Контакты</a></li>
+          </ul>
+
+          <ul class="to-call">
+            <li class="to-call_number">
+              <img src="img/mobile.png" alt="mobile">
+              <div>+375 (29) 608-00-55</div>
+            </li>
+            <li class="to-call_button">
+              <div class="to-call_img">
+                <a href="tel:+375296080055"><img src="img/phone.png" alt="Позвонить"></a>
+              </div>
+              <div class="to-call_ref">
+                <a href="#mfp" class="modal-pop-up">заявка</a>
+              </div>
+            </li>
+          </ul>
+
+        </nav>
+
         <div class="mob-menu">
-          <a href="#menu" class="mburger mburger--collapse" style="position: relative; z-index: 1000;">
-            <b></b>
-            <b></b>
-            <b></b>
+          <i class="fa fa-bars  burger-open-close" aria-hidden="true"></i>
+          <img src="https://img.icons8.com/ios/50/000000/delete-sign.png" class="fa fa-times burger-open-close" aria-hidden="true">
           </a>
+          <div class="block-for-mob-menu">
+            <div class="block-for-mob-menu-nav"></div>
+            <div class="block-for-mob-menu-call"></div>
+          </div>
         </div>
-      </div>
-    </header>
 
-    <section class="main">
-      <div class="navigation">
-        <div class="navigation_item">
-          <span><a href="#">Главная</a></span>
-        </div>
-        <div class="navigation_item">
-          <span>&diams;</span>
-          <span><a href="#">Новости</a></span>
-        </div>
-        <div class="navigation_item">
-          <span>&diams;</span>
-          <span><a href="#">Новый банк-партнер&nbsp;с привлекательными&nbsp;кредитами для Вас</a></span>
+      </div>
+    </div>
+
+    <div class="modal mfp-hide" id="mfp">
+    </div>
+
+  </header>
+
+  <article>
+    <section>
+      <div class="container">
+        <div class="main">
+          <div class="navigation">
+            <div class="navigation_item">
+              <span><a href="#">Главная</a></span>
+            </div>
+            <div class="navigation_item">
+              <span>&diams;</span>
+              <span><a href="#">Новости</a></span>
+            </div>
+            <div class="navigation_item">
+              <span>&diams;</span>
+              <span><a href="#">Новый банк-партнер&nbsp;с привлекательными&nbsp;кредитами для вас</a></span>
+            </div>
+          </div>
+          <h1>Новый банк-партнер с&nbsp;привлекательными кредитами для&nbsp;вас</h1>
+          <p>
+            Банк Москва-Минск стал партнёром компании жилищному кредитованию и снизил процентные ставки до рекордно
+            низкого уровня от 8%
+            за первые 2 года для всех категорий заёмщиков. Для многодетных семей ставка ещё ниже на 1%. Клиенты ЖК
+            «Лайт» могут получить
+            консультацию, подать заявку на кредит и оформить все необходимые документы в любом офисе продаж.
+          </p>
+          <p>
+            Кредитование является одним из лучших способов купить собственную квартиру даже в том случае, если вы не
+            готовы оплатить всю ее стоимость в течение ближайшего времени. Квартира в кредит от банка-партнера
+            Москва-Минск – это одна из самых выгодных процентных ставок в стране, длительный срок выплат, досрочное
+            погашение без штрафных санкций и прочие эксклюзивные условия, которые действуют только для будущих жильцов
+            ЖК «Лайт»
+          </p>
+          <div class="owl-carousel">
+            <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
+            <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
+            <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
+          </div>
+          <p>
+            Кредитование является одним из лучших способов купить собственную квартиру даже в том случае, если вы не
+            готовы
+            оплатить
+            всю ее стоимость в течение ближайшего времени. Квартира в кредит от банка-партнера Москва-Минск – это одна
+            из
+            самых выгодных
+            процентных ставок в стране, длительный срок выплат, досрочное погашение без штрафных санкций и прочие
+            эксклюзивные
+            условия,
+            которые действуют только для будущих жильцов ЖК «Лайт»!
         </div>
       </div>
-      <h1>Новый банк-партнер с привлекательными кредитами для Вас</h1>
-      <p>
-        Банк Москва-Минск стал партнёром компании жилищному кредитованию и снизил процентные ставки до рекордно низкого
-        уровня от 8%
-        за первые 2 года для всех категорий заёмщиков. Для многодетных семей ставка ещё ниже на 1%. Клиенты ЖК «Лайт»
-        могут получить
-        консультацию, подать заявку на кредит и оформить все необходимые документы в любом офисе продаж.
-      </p>
-      <div class="owl-carousel">
-        <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
-        <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
-        <a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Слайд-1"></a>
-      </div>
-      <p>
-        Кредитование является одним из лучших способов купить собственную квартиру даже в том случае, если вы не готовы
-        оплатить
-        всю ее стоимость в течение ближайшего времени. Квартира в кредит от банка-партнера Москва-Минск – это одна из
-        самых выгодных
-        процентных ставок в стране, длительный срок выплат, досрочное погашение без штрафных санкций и прочие
-        эксклюзивные
-        условия,
-        которые действуют только для будущих жильцов ЖК «Лайт»!
-      </p>
     </section>
 
-    <section class="news">
-      <div class="news_block">
+    <section>
+      <div class="container">
+        <div class="news_block">
+        </div>
+        <div class="news-add-button">
+          <button id="1">
+            <img src="img/arrow.png" alt="Стрелка">&nbsp; &nbsp;все новости
+          </button>
+        </div>
       </div>
-      <button id="1">
-        &larr;&nbsp; все новости
-      </button>
     </section>
 
-    <footer>
+  </article>
+
+  <footer>
+    <div class="container-footer">
       <div class="footer">
         <div class="footer-logo">
           <div class="footer-logo_img">
             <img src="img/logo-light.png" alt="Лайт">
           </div>
           <div class="footer-logo_text">
-            &copy;&laquo;Строминвест"&raquo;, 2017
+            &copy;&laquo;Строминвест&raquo;, 2017
           </div>
         </div>
         <div class="footer-add">
@@ -136,7 +181,7 @@
           </ul>
           <div class="developer">
             <div class="developer_blank">
-              Разработка сайта &ndash; &nbsp;
+              Разработка сайта &mdash;&nbsp;
             </div>
             <div class="developer_name">
               <a href="//medialine.by" target="blank"><span>Медиа Лайн</span></a>
@@ -144,45 +189,9 @@
           </div>
         </div>
       </div>
-    </footer>
-  </div>
-
-  <div class="modal mfp-hide" id="3">
-  </div>
+    </div>
+  </footer>
 
 </body>
-<script>
-  document.addEventListener(
-    "DOMContentLoaded", () => {
-      new Mmenu("#menu", {
-        "autoHeight": true,
-        "extensions": [
-          "border-none",
-          "fx-menu-slide",
-          "pagedim-black",
-          "position-left",
-          "position-front",
-          "fx-listitems-slide"
-        ],
-        "autoHeight": true
-      });
-    }
-  );
-</script>
-
-<nav id="menu">
-  <ul>
-    <li><a href="#">О комплексе</a></li>
-    <li><a href="#">Выбор квартиры</a></li>
-    <li><a href="#" id="4">О застройщике <i class="fa fa-angle-up to-hide" aria-hidden="true"></i></a>
-    <li><a href="#" class="to-hide">Пункт 1</a></li>
-    <li><a href="#" class="to-hide">Пункт 2</a></li>
-    <li><a href="#" class="to-hide">Пункт 3</a></li>
-    </li>
-    <li><a href="tel:+375296080055" class="mobile"><img src="img/mobile.png" alt="Позвонить">+375 (29) 608-00-55</a>
-    </li>
-    <li><a href="tel:+375296080055" class="yelow"><img src="img/phone.png" alt="Позвонить">Заявка</a></li>
-  </ul>
-</nav>
 
 </html>

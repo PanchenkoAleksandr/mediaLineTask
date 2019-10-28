@@ -1,73 +1,113 @@
 .main {
-  @include container(
-
-  );
+  @media (max-width: 899px) {
+    padding: 0px;
+  }
+  padding: $main-padding;
+  max-width: $container-max-width;
   .navigation {
     display: inline-flex;
-    padding: $main-padding;
-    @media (max-width: 1149px) {
-      padding: 10px;
-    }
     @media (max-width: 560px) {
       display: none;
     }
     .navigation_item {
+      padding: 20px
+        5px;
       span {
         a {
+          font-size: 0.85rem;
           @include href(
 
           );
+          &:hover {
+            color: $back-ground-color;
+            transition: all
+              0.5s;
+          }
         }
       }
     }
   }
   h1 {
-    padding: $main-padding;
+    @media (max-width: 575px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 465px) {
+      font-size: 1.5rem;
+    }
+    font: 10pt
+      sans-serif;
+    padding: 20px
+      0px;
+    font-size: 2rem;
+    font-weight: bold;
     @media (max-width: 1149px) {
       padding: 10px;
     }
-    font-size: 3.5rem;
-    @media (max-width: 1149px) {
-      font-size: 1.5rem;
-    }
+    font-size: 3.1rem;
   }
   p {
-    padding: $main-padding;
+    padding: 20px
+      0px;
     @media (max-width: 1149px) {
-      padding: 10px !important;
+      padding: 10px;
     }
     line-height: 1.5rem;
   }
   .owl-carousel {
-    padding: $main-padding;
-    max-width: 800px;
+    @media (max-width: 899px) {
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 1149px) {
+      padding: 0px;
+    }
+    max-width: 810px;
     margin: 0
       auto;
-    @media (max-width: 1149px) {
-      padding: 10px;
-    }
+    margin-top: 50px;
+    margin-bottom: 100px;
     .owl-nav {
-      &
-        .owl-prev {
-        @include owl-nav(
+      @include owl-nav(
 
-        );
-        left: 25px;
+      );
+      width: 100%;
+      .owl-prev {
+        border-radius: 50%;
+        outline: none;
+        position: relative;
+        left: -52.5%;
+        @media (max-width: 899px) {
+          left: -35%;
+        }
+        &:hover {
+          background-color: $back-ground-color *
+            2;
+          transition: all
+            0.5s;
+        }
       }
-      &
-        .owl-next {
-        @include owl-nav(
-
-        );
-        right: 25px;
+      .owl-next {
+        border-radius: 50%;
+        outline: none;
+        position: relative;
+        right: -52.5%;
+        @media (max-width: 899px) {
+          right: -35%;
+        }
+        &:hover {
+          background-color: $back-ground-color *
+            2;
+          transition: all
+            0.5s;
+        }
       }
     }
     .owl-dots {
-      @media (max-width: 990px) {
+      @media (max-width: 550px) {
         display: none;
       }
       position: absolute;
-      bottom: 0;
+      bottom: -50px;
       left: 0;
       width: 100%;
       text-align: center;
@@ -83,6 +123,11 @@
         padding: 0
           10px !important;
         span {
+          &:hover {
+            background-color: $back-ground-color;
+            transition: all
+              0.5s;
+          }
           display: inline-block;
           width: 10px;
           height: 10px;

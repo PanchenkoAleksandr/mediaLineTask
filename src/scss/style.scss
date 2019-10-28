@@ -1,45 +1,64 @@
 $back-ground-color: #ffe05d;
-$font-family: arial;
-$img-1: "img/news-1.jpg";
-$main-padding: 25px
+$back-ground-color-header: #f4f4f4;
+$font-family: "Akzidenz-Grotesk Pro Light";
+$main-padding: 0px
   90px;
 $close-width: 160px;
 $close-height: 160px;
+$container-max-width: 1150px;
+
+@font-face {
+  font-family: "Akzidenz-Grotesk Pro Light";
+  src: url("../webfonts/AkzidenzGroteskPro-Light.eot");
+  src: url("../webfonts/AkzidenzGroteskPro-Light.eot?#iefix")
+      format(
+        "embedded-opentype"
+      ),
+    url("../webfonts/AkzidenzGroteskPro-Light.woff")
+      format(
+        "woff"
+      ),
+    url("../webfonts/AkzidenzGroteskPro-Light.ttf")
+      format(
+        "truetype"
+      );
+  font-weight: normal;
+  font-style: normal;
+}
 
 @mixin container(
 
 ) {
-  display: block;
+  @media (max-width: 899px) {
+    padding: 10px;
+  }
   margin: 0
     auto;
-  width: 100%;
-  max-width: 1150px;
 }
 
 @mixin menu-item(
 
 ) {
+  @media (max-width: 1058px) {
+    padding: 10px;
+  }
+  padding: 0px
+    25px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
-  width: 125px;
+
   cursor: pointer;
 }
 
 @mixin href(
 
 ) {
-  font-size: 14px;
   text-decoration: none;
   color: black;
   cursor: pointer;
-}
-
-@mixin owl-nav(
-
-) {
 }
 
 @mixin button(
@@ -47,7 +66,7 @@ $close-height: 160px;
 ) {
   cursor: pointer;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   background: rgba(
     1,
     1,
@@ -70,6 +89,7 @@ $close-height: 160px;
 @mixin owl-nav(
 
 ) {
+  border-radius: 50%;
   outline: none;
   position: absolute;
   width: 40px;
@@ -78,13 +98,11 @@ $close-height: 160px;
   margin-top: -20px;
   border-radius: 100%;
   text-align: center;
-  transition: opacity
-    0.25s;
-  cursor: pointer;
   i {
+    width: 50px;
+    height: 50px;
     color: $back-ground-color;
     font-size: 50px;
-    line-height: 50px;
   }
 }
 
@@ -100,6 +118,29 @@ $close-height: 160px;
       0.5
     );
 }
+@mixin modal-text-style(
+
+) {
+  font: 11pt
+    sans-serif;
+  font-weight: 900;
+}
+@mixin input-style(
+
+) {
+  @media (max-width: 450px) {
+    min-height: auto;
+  }
+  text-indent: 30px;
+  opacity: 0.5;
+  font: 11pt
+    sans-serif;
+  font-weight: 900;
+  width: 100%;
+  margin: 15px
+    0px;
+  min-height: 45px;
+}
 
 * {
   margin: 0;
@@ -108,8 +149,9 @@ $close-height: 160px;
 }
 
 @import "header";
-@import "mmenu";
 @import "main";
+@import "news";
 @import "news";
 @import "footer";
 @import "modal";
+@import "mmenu";

@@ -24,7 +24,7 @@ gulp.task("make-min-css", () => {
     // )
     .pipe(rename("style.min.css")) //переименовываем в style.min.css
     .pipe(sourcemaps.write()) //запуск sourcemaps для отображения в браузере
-    .pipe(gulp.dest("dist/style"));
+    .pipe(gulp.dest("build/style"));
 });
 
 gulp.task("browser-sync-work", () => {
@@ -41,4 +41,4 @@ gulp.task("watch", () => {
   gulp.watch("src/scss/**/*.scss", gulp.series("make-min-css"));
 });
 
-gulp.task("default", gulp.series(gulp.parallel("watch", "browser-sync-work")));
+gulp.task("default", gulp.parallel(gulp.parallel("watch", "browser-sync-work")));

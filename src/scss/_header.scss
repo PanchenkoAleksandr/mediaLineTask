@@ -1,111 +1,180 @@
-header {
-  @include container(
-
-  );
+.container-header {
+  border-bottom: 1px
+    solid
+    $back-ground-color-header;
   .header {
-    @media (max-width: 900px) {
+    @include container(
+
+    );
+    max-width: $container-max-width;
+    @media (max-width: 899px) {
       background-color: $back-ground-color;
+      height: 50px;
+      padding: 0px;
     }
-    display: inline-flex;
-    width: 100%;
-    height: 100px;
-    justify-content: space-between;
+    display: flex;
+    height: 90px;
     .logo {
       @include logo(
 
       );
-      background-color: $back-ground-color;
-      flex-basis: 15%;
-      max-width: 150px;
-    }
-    .menu {
       @media (max-width: 899px) {
-        display: none !important;
-        width: 100% !important;
-      }
-      display: inline-flex;
-      justify-content: space-around;
-      flex-basis: 65%;
-      .menu-item {
-        @include menu-item(
-
-        );
-        &.active {
-          font-weight: bold;
-          border-bottom: 3px
-            solid
-            $back-ground-color;
+        img {
+          height: 30px;
         }
-        .menu-item-href {
-          @include href(
+      }
+      width: 150px;
+      background-color: $back-ground-color;
+    }
+    #menu {
+      flex-basis: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      .menu {
+        @media (max-width: 899px) {
+          display: none;
+          width: 100%;
+        }
+        flex-basis: 80%;
+        display: inline-flex;
+        justify-content: space-around;
+        .menu-item {
+          position: relative;
+          @include menu-item(
 
           );
-          text-align: center;
-        }
-      }
-    }
-    .to-call {
-      @media (max-width: 899px) {
-        display: none !important;
-        width: 100% !important;
-      }
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-content: space-around;
-      flex-basis: 20%;
-      min-width: 200px;
-      .to-call_number {
-        font-size: 1.25rem;
-        text-align: center;
-      }
-      .to-call_button {
-        display: inline-flex;
-        justify-content: center;
-        align-content: center;
-        .to-call_img {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 30px;
-          background-color: $back-ground-color;
-          border-radius: 50%;
-          a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img {
-              width: 15px;
-              height: 15px;
-            }
+          &:hover {
+            background-color: $back-ground-color;
+            transition: all
+              0.75s;
           }
-        }
-        .to-call_ref {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          a {
+          &.active {
+            font-weight: bold;
+            border-bottom: 3px
+              solid
+              $back-ground-color;
+          }
+          .menu-item-href {
             @include href(
 
             );
-            @include button(
+            text-align: center;
+          }
+          i {
+            display: none;
+          }
+          .to-hide-item {
+            @include href(
 
             );
-            border: none;
-            margin-left: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 2px
-              dotted
-              black;
+            @media (min-width: 900px) {
+              position: absolute;
+              background-color: $back-ground-color;
+              bottom: -90px;
+              right: 0px;
+              display: none;
+              padding: 15px
+                0px;
+              a {
+                @include href(
+
+                );
+                padding: 10px
+                  58px;
+              }
+            }
+          }
+        }
+        #sub-menu.menu-item {
+          &.active {
+            background-color: $back-ground-color;
+          }
+        }
+      }
+
+      .to-call {
+        @media (max-width: 899px) {
+          display: none;
+        }
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $back-ground-color-header;
+        .to-call_number {
+          img {
+            display: none;
+          }
+          list-style-type: none;
+          font-weight: 600;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+        .to-call_button {
+          border-radius: 3px;
+          &:hover {
+            background-color: $back-ground-color;
+            transition: all
+              0.5s;
+          }
+          border: none;
+          background: rgba(
+            1,
+            1,
+            1,
+            0
+          );
+          cursor: pointer;
+          width: 150px;
+          margin-top: 10px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          .to-call_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: $back-ground-color;
+            border-radius: 50%;
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+          .to-call_ref {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+              @include href(
+
+              );
+              font: 10pt
+                sans-serif;
+              text-align: center;
+              font-weight: 900;
+              margin-left: 10px;
+              text-transform: uppercase;
+              border-bottom: 2px
+                dotted
+                black;
+            }
           }
         }
       }
     }
     .mob-menu {
-      @media (min-width: 900px) {
-        display: none;
+      display: none;
+      @media (max-width: 899px) {
+        display: block;
       }
     }
   }

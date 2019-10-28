@@ -2,40 +2,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    opacity: 1;
-    width: $close-width;
-    height: $close-height;
-    position: relative;
-    top: -$close-height/2 !important;
-    left: 500px-$close-width/2-7px !important;
-    cursor: pointer;
-    margin-bottom: -$close-height/1.5;
-  }
+  margin: 0px
+    $close-width/2;
   .modal-add {
-    font-weight: bold;
+    position: relative;
     background-color: white;
     border: 3px
       solid
       $back-ground-color;
     max-width: 500px;
-    width: 75%;
+
+    #close {
+      @media (max-width: 450px) {
+        right: $close-width/2 -
+          20px;
+        height: $close-height -
+          15px;
+      }
+      position: absolute;
+      z-index: 10;
+      padding: 0px;
+      width: $close-width;
+      height: auto;
+      opacity: 1;
+      top: -$close-height/2;
+      right: -$close-width/2;
+      margin-bottom: -$close-height/1.25;
+      cursor: pointer;
+    }
+
     form {
-      font-weight: bold;
-      padding: 0px
-        60px
-        60px
-        60px;
+      @include modal-text-style(
+
+      );
+      margin: 60px;
       input {
-        padding-left: 15px;
-        width: 100%;
-        margin: 15px
-          0px;
-        height: 50px;
+        @include input-style(
+
+        );
       }
       .rooms {
-        font-weight: bold;
+        margin: 15px
+          0px;
+        span {
+          @include modal-text-style(
+
+          );
+          vertical-align: middle;
+          margin-right: 30px;
+          @media (max-width: 465px) {
+            margin-right: 0px;
+          }
+        }
+        display: flex;
+        flex-wrap: wrap;
         .rooms_count {
+          &:hover {
+            background-color: $back-ground-color;
+            transition: all
+              0.5s;
+          }
+          &:focus {
+            background-color: $back-ground-color;
+            transition: all
+              0.5s;
+          }
+          margin: 0px
+            2.5px;
           width: 25px;
           height: 25px;
           @include button(
@@ -46,25 +79,43 @@
             #d2d2d2;
         }
       }
-    }
-    textarea {
-      padding: 15px;
-      font-weight: bold;
-      width: 100%;
-      margin: 15px
-        0px;
-      height: 130px;
-    }
-    .submit {
-      @include button(
+      textarea {
+        @include input-style(
 
-      );
-      font-weight: bold;
-      background-color: $back-ground-color;
-      box-shadow: 0
-        1px
-        5px
-        #d2d2d2;
+        );
+        height: 130px;
+        opacity: 0.5;
+        padding-top: 15px;
+        width: 100%;
+        margin: 15px
+          0px;
+
+        margin-bottom: 45px;
+      }
+      .submit {
+        @include button(
+
+        );
+        text-indent: 0px;
+        height: auto;
+        padding: 20px
+          0px;
+        margin-bottom: 0px;
+        background-color: $back-ground-color;
+        border-radius: 2px;
+        box-shadow: 0
+          2.5px
+          2.5px
+          #d2d2d2;
+        &:hover {
+          box-shadow: 0px
+            10px
+            10px
+            #d2d2d2;
+          transition: all
+            0.5s;
+        }
+      }
     }
   }
 }

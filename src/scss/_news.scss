@@ -1,22 +1,25 @@
-.news {
+.container {
+  padding: 40px
+    0px;
   @include container(
 
   );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: $container-max-width;
   .news_block {
-    width: 100%;
+    @media (max-width: 1149px) {
+      justify-content: space-around;
+    }
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     .news_block_item {
+      margin: 2.5px
+        0px;
       background-position: center;
-      margin: 5px;
-      width: 370px;
-      height: 300px;
+      width: 380px;
+      height: 270px;
       &:hide {
-        display: none !important;
+        display: none;
       }
       .news_block_item_wrap {
         display: flex;
@@ -31,21 +34,24 @@
         );
         text-align: center;
         height: inherit;
-        padding: 0px
-          20px;
         &:hover {
           background-color: inherit;
           opacity: 100%;
           transition: all
             0.75s;
         }
-        a {
-          @include href(
+        div {
+          padding: 5px
+            40px;
+          a {
+            @include href(
 
-          );
-          font-weight: bold;
-          color: white;
-          line-height: 1.5rem;
+            );
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.5rem;
+          }
         }
         .news_block_item_date {
           color: $back-ground-color;
@@ -54,29 +60,41 @@
       }
     }
   }
-
-  button {
-    @media (max-width: 759px) {
-      padding: 10px;
-      height: 50px;
-    }
-    width: 250px;
-    height: 100px;
-    cursor: pointer;
-    padding: 50px
-      0px
-      75px
+  .news-add-button {
+    display: flex;
+    padding: 40px
       0px;
-    font-size: 1.5rem;
-    border: none;
-    background: rgba(
-      1,
-      1,
-      1,
-      0
-    );
-    &:focus {
-      outline: none;
+    button {
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 3px;
+      &:hover {
+        background-color: $back-ground-color;
+        transition: all
+          0.75s;
+      }
+      img {
+        width: 25px;
+      }
+      @media (max-width: 759px) {
+        padding: 10px;
+        height: 50px;
+      }
+      @include container(
+
+      );
+      text-transform: uppercase;
+      border: none;
+      background: rgba(
+        1,
+        1,
+        1,
+        0
+      );
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
