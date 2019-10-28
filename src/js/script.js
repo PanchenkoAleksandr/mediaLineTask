@@ -1,15 +1,6 @@
 (function ($) {
   $(document).ready(function () {
 
-    $.ajax({
-      url: 'modal.html',
-      method: 'GET'
-    }).then(function (res) {
-      $('.modal').html(res);
-    }).catch(function (err) {
-      console.log(err);
-    });
-
     $(".owl-carousel").owlCarousel({
       items: 1,
       nav: true,
@@ -58,7 +49,7 @@
     });
 
     $('.modal-pop-up').magnificPopup({
-      type: 'inline'
+      type: 'ajax'
     });
 
     $('.rooms_count').on('click', function () {
